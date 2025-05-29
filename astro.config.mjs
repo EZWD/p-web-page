@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://EZWD.github.io/',
-  base: "/",
+  site: 'https://ezwd.github.io/p-web-page/',
+  base: '/p-web-page/',
   integrations: [mdx(), sitemap(), tailwind()]
 });
