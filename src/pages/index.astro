@@ -4,6 +4,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 
+// import images
 import project1Img from '../assets/img/Project_1.png';
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -36,7 +37,8 @@ const last_posts = posts.slice(0, 3);
   <HorizontalCard
     title="Multitasking Between Realities: An Examination of Multitasking Using Augmented Reality Under Different Task Demand Levels"
     img={project1Img}
-    desc="test"
+    desc='<span class="text-black">Peiyu Zhang</span> and <span class="text-gray-400">Sara Riggs</span><br/>User study investigating how augmented reality through 
+      OST-HMDs impacts multitasking performance and perceived workload across different levels of task demand.'
     url="https://journals.sagepub.com/doi/abs/10.1177/10711813251357901"
     badge="HFES Annual Meeting (ASPIRE) 2025"
   />
