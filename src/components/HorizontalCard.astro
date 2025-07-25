@@ -9,16 +9,17 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 >
   <a href={url} target={target}>
     <div class="hero-content flex-col md:flex-row">
-      {img && (
-        <img
-          src={img}
-          alt={title}
-          class="max-w-full md:max-w-[13rem] rounded-lg"
-          width="750"
-          height="422"
-          loading="lazy"
-        />
-      )}
+      {
+        img && (
+          <Image
+            src={img}
+            width={750}
+            height={422}
+            // alt={title}
+            class="max-w-full md:max-w-[13rem] rounded-lg"
+          />
+        )
+      }
       <div class="grow w-full">
         <h1 class="text-xl font-bold">
           {title}
