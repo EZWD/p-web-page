@@ -18,7 +18,9 @@ const { sideBarActiveItemID } = Astro.props;
         </div>
       </a>
     </div>
-    <SideBarMenu class="mt-10" sideBarActiveItemID={sideBarActiveItemID} />
+    <div class="mt-10">
+      <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
+    </div>
     <SideBarFooter />
   </aside>
 </div>
