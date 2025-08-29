@@ -5,7 +5,15 @@ import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 
 // import images
-import project1Img from '../assets/img/Project_1.png';
+import hfes25 from '../assets/img/hfes25.png';
+import CHI26AR from '../assets/img/CHI26AR.jpg';
+import Survey from '../assets/img/Survey.jpg';
+import MoiréTag from '../assets/img/MoiréTag.png';
+import Fringer from '../assets/img/Fringer.png';
+import ModernPathology from '../assets/img/ModernPathology.png';
+import VisualSearchTVCG from '../assets/img/VisualSearchTVCG.png';
+
+
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -35,26 +43,78 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <HorizontalCard
+    title="Combining Real and Virtual Displays: Effects of Spatial Layout and Task Load on Multitasking in Augmented Reality"
+    img={CHI26AR}
+    desc='<span class="text-black">Peiyu Zhang</span>, <span class="text-gray-400">Mohamad El Iskandarani</span>, <span class="text-gray-400">Sara Riggs</span><br/> User study examining how AR display layouts, context switching, and task load affect multitasking performance and perceived workload.'
+    url="#"
+    badge="In submission to CHI 26"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="The Effect of Layout on Visual Search in Augmented Reality Multi-Window Displays"
+    img={VisualSearchTVCG}
+    desc='<span class="text-black">Peiyu Zhang</span>, <span class="text-gray-400">Mohamad El Iskandarani</span>, <span class="text-gray-400">Sara Riggs</span><br/> 
+    User study examining how the spatial placement of multi-display AR, in relation to depth separation, information density, and the curvature of virtual multi-window displays, affects visual search performance.'
+    url="#"
+    badge="In submission to IEEE TVCG"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Deep learning-assisted system improves practical effect in cervical cytopathology diagnosis: A comparative study of reading modes"
+    img={ModernPathology}
+    desc='<span class="text-gray-400">Zichen Ye</span>, 
+    <span class="text-black">Peiyu Zhang</span>, 
+    <span class="text-gray-400">Ronggan Wei</span>, 
+    <span class="text-gray-400">Haiyan Niu</span>, 
+    <span class="text-gray-400">Hongxia Li</span>, 
+    <span class="text-gray-400">Mingjuan Wang</span>, 
+    <span class="text-gray-400">Sara Lu Riggs</span>, 
+    and <span class="text-gray-400">Peng Xue</span><br/>
+
+    '
+    url="#"
+    badge="Accepted to Modern Pathology"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
     title="Multitasking Between Realities: An Examination of Multitasking Using Augmented Reality Under Different Task Demand Levels"
-    img={project1Img}
+    img={hfes25}
     desc='<span class="text-black">Peiyu Zhang</span> and <span class="text-gray-400">Sara Riggs</span><br/>User study investigating how augmented reality through OST-HMDs impacts multitasking performance and perceived workload across different levels of task demand.'
     url="https://journals.sagepub.com/doi/abs/10.1177/10711813251357901"
     badge="HFES Annual Meeting (ASPIRE) 2025"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="MoiréTag: A Low-Cost Tag for High-Precision Tangible Interactions without Active Components"
+    img={MoiréTag}
+    desc='<span class="text-black">Peiyu Zhang</span>, <span class="text-gray-400">Wen Ying</span>, <span class="text-gray-400">Sara Riggs</span>, and <span class="text-gray-400">Seongkook Heo</span><br/> A computer-vision based touch force sensing method that supports the creation of tangible interfaces.'
+    url="https://dl.acm.org/doi/pdf/10.1145/3698113"
+    badge="🏆 ACM ISS 2024 (Honorbale Mention Award)"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    title="Chinese colposcopists' attitudes toward the colposcopic artificial intelligence auxiliary diagnostic system (CAIADS): A nation-wide, multi-center survey"
+    img={Survey}
+    desc='<span class="text-gray-400">Huike Wang*</span>, 
+      <span class="text-gray-400">Zichen Ye*</span>, 
+      <span class="text-black">Peiyu Zhang*</span>, 
+      <span class="text-gray-400">Xiaoli Cui</span>, 
+      <span class="text-gray-400">Mingyang Chen</span>, 
+      <span class="text-gray-400">Aiyuan Wu</span>, 
+      <span class="text-gray-400">Sara Lu Riggs</span>, 
+      <span class="text-gray-400">Peng Xue</span>, 
+      and <span class="text-gray-400">Youlin Qiao</span><br/>
+    A nation-wide questionnaire that collected clinicians&#39; sociodemographic information and assess their awareness, attitudes, and acceptance toward AI-assisted diagnostic system.'
+    url="https://journals.sagepub.com/doi/full/10.1177/20552076241279952"
+    badge="Sage Digital Health"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Fringer: A finger-worn passive device enabling computer vision based force sensing using moiré fringes"
+    img={Fringer}
+    desc='span class="text-black">Peiyu Zhang</span>, <span class="text-gray-400">Wen Ying</span>, <span class="text-gray-400">Sara Riggs</span>, and <span class="text-gray-400">Seongkook Heo</span><br/> A finger sleeve that physically visualizes the force to allow a camera to estimate the force without using any active sensors.'
+    url="https://dl.acm.org/doi/abs/10.1145/3526114.3558706"
+    badge="UIST 2022 Poster"
   />
 
   <!-- <div>
