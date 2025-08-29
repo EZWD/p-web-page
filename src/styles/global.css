@@ -2,8 +2,3 @@
     display: none;
 }
 
-.badge-secondary.badge {
-  background-color: #065e0f !important; /* Tailwind's blue-600 */
-  color: #ffffff !important;
-  border-color: #065e0f !important; /* also fix the outline */
-}
