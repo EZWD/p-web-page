@@ -10,6 +10,16 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 >
   <a href={url} target={target}>
     <div class="hero-content flex-col md:flex-row">
+      <div class="card-actions justify-end">
+          {
+            tags &&
+              tags.map((tag) => (
+                <a href={`${tag_url}/${tag}`} class="badge badge-outline">
+                  {tag}
+                </a>
+              ))
+          }
+      </div>
       {
         img && (
           <Image
@@ -25,16 +35,6 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
         <h1 class="text-xl font-bold">{title}</h1>
         <p class="py-1 text-1xl" set:html={desc}></p>
         {badge && <div class="block mt-2 badge badge-secondary">{badge}</div>}
-        <div class="card-actions justify-end">
-          {
-            tags &&
-              tags.map((tag) => (
-                <a href={`${tag_url}/${tag}`} class="badge badge-outline">
-                  {tag}
-                </a>
-              ))
-          }
-        </div>
       </div>
     </div>
   </a>
