@@ -6,12 +6,13 @@ import createSlug from "../lib/createSlug"
 
 // import images
 import hfes25 from '../assets/img/hfes25.png';
-import CHI26AR from '../assets/img/CHI26AR.jpg';
+import VR26 from '../assets/img/VR26.jpg';
 import Survey from '../assets/img/Survey.jpg';
 import MoiréTag from '../assets/img/MoiréTag.png';
 import Fringer from '../assets/img/Fringer.png';
 import ModernPathology from '../assets/img/ModernPathology.png';
 import VisualSearchTVCG from '../assets/img/VisualSearchTVCG.png';
+import MedAIAppErgo from '../assets/img/MedAIAppErgo.png';
 
 
 
@@ -42,11 +43,11 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <HorizontalCard
-    title="Combining Real and Virtual Displays: Effects of Spatial Layout and Task Load on Multitasking in Augmented Reality"
-    img={CHI26AR}
-    desc={`<span class="text-black">Peiyu Zhang</span>, <span class="text-gray-400">Mohamad El Iskandarani</span>, <span class="text-gray-400">Sara Riggs</span><br/> User study examining how AR display layouts, context switching, and task load affect multitasking performance and perceived workload.<br/> `}
+    title="Multitasking Across Physical and Virtual Displays: The Effect of Spatial Discontinuity and Task Load"
+    img={VR26}
+    desc={`<span class="text-black">Peiyu Zhang</span>, <span class="text-gray-400">Mohamad El Iskandarani</span>, <span class="text-gray-400">Sara Riggs</span><br/> User study examining how the use of AR, spatial discontinuity between displays, and task load affect multitasking performance and perceived workload.<br/> `}
     url="#"
-    badge="In submission to CHI 26"
+    badge="In submission to IEEE VR 26"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
@@ -57,6 +58,25 @@ const last_posts = posts.slice(0, 3);
     badge="In submission to IEEE TVCG"
   />
   <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="The Effect of AI Assistance Timing on Performance and User Perceptions in Pathological Slide Diagnosis"
+    img={MedAIAppErgo}
+    desc={`<span class="text-black">Peiyu Zhang</span>, 
+    <span class="text-gray-400">Zichen Ye</span>, 
+    <span class="text-gray-400">Ronggan Wei</span>, 
+    <span class="text-gray-400">Haiyan Niu</span>, 
+    <span class="text-gray-400">Hongxia Li</span>, 
+    <span class="text-gray-400">Mingjuan Wang</span>, 
+    <span class="text-gray-400">Peng Xue</span>,
+    and <span class="text-gray-400">Sara Lu Riggs</span>, 
+    <br/>
+    User study evaluating how the timing of AI-provided information affects clinicians' performance, workload, and trust and percieved usability of the AI tool. <br/> `}
+    url="#"
+    badge="Accpeted to Elsevier Applied Ergonomics"
+  />
+  <div class="divider my-0"></div>
+
   <HorizontalCard
     title="Deep learning-assisted system improves practical effect in cervical cytopathology diagnosis: A comparative study of reading modes"
     img={ModernPathology}
@@ -69,8 +89,8 @@ const last_posts = posts.slice(0, 3);
     <span class="text-gray-400">Sara Lu Riggs</span>, 
     and <span class="text-gray-400">Peng Xue</span><br/>
     User study evaluating how the timing of AI-provided information affects clinicians' performance and workload when diagnosing cervical cytology slides.<br/>`}
-    url="#"
-    badge="Accepted to Modern Pathology"
+    url="https://www.sciencedirect.com/science/article/abs/pii/S0893395225001802"
+    badge="Elsevier Modern Pathology"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
