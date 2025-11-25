@@ -15,6 +15,33 @@ const {
   sideBarActiveItemID,
   ogType,
 } = Astro.props;
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Peiyu Zhang",
+  "url": "https://peiyuzhang.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/peiyu-zhang-a2214218a",        
+    "https://scholar.google.com/citations?user=3yatSfQAAAAJ"       
+  ],
+  "jobTitle": "Systems and Information Engineering PhD Candidate, Human-Computer Interaction Researcher",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "University of Virginia (UVA)"
+  }, 
+  "knowsAbout": [
+    "Computer Science",
+    "Systems and Information Engineering",
+    "Human-Computer Interaction",
+    "Human Factors",
+    "AR/VR/MR/XR",
+    "Human-AI collaboration",
+    "Machine Learning",
+    "Data Analytics",
+    "Computer Vision",
+  ]
+});
 ---
 
 <!doctype html>
