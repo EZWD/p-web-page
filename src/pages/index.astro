@@ -7,6 +7,7 @@ import createSlug from "../lib/createSlug"
 // import images
 import hfes25 from '../assets/img/hfes25.png';
 import VR26 from '../assets/img/VR26.jpg';
+import CHI26 from '../assets/img/CHI26.jpg';
 import Survey from '../assets/img/Survey.jpg';
 import MoiréTag from '../assets/img/MoiréTag.png';
 import Fringer from '../assets/img/Fringer.png';
@@ -55,6 +56,16 @@ const last_posts = posts.slice(0, 3);
   <div>
     <div class="text-3xl w-full font-bold mb-2">My Research</div>
   </div>
+
+  <HorizontalCard
+    title="Web Pages as 3D Proxies in VR: A Design Framing and Preliminary Exploration"
+    img={CHI26}
+    desc={`<span class="text-gray-400">Tianjie Shu*</span>, <span class="text-black">Peiyu Zhang*</span>, <br/> Novel VR web browsing experience with tabs represented by 3D proxies of real-world objects. <br/> `}
+    doiUrl="#"
+    pdfUrl="#"
+    url="#"
+    badge="CHI EA 26"
+  />
 
   <HorizontalCard
     title="Multitasking Across Physical and Virtual Displays: The Effect of Spatial Discontinuity and Task Load"

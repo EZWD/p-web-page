@@ -36,7 +36,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
       </h1>
 
       {badge && (
-        <div class="badge badge-secondary mt-1">{badge}</div>
+        <div class="badge badge-primary mt-1">{badge}</div>
       )}
 
       <div class="mt-2 flex flex-wrap gap-2">
@@ -46,7 +46,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
               href={doiUrl}
               target={target}
               rel="noopener noreferrer"
-              class="badge badge-secondary"
+              class="badge badge-secondary badge-soft"
             >
               DOI
             </a>
@@ -59,7 +59,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
               href={pdfUrl}
               target={target}
               rel="noopener noreferrer"
-              class="badge badge-secondary"
+              class="badge badge-secondary badge-soft"
             >
               PDF
             </a>
