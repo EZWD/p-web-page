@@ -1,48 +1,84 @@
 ---
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+const {
+  title,
+  img,
+  desc,
+  url,
+  badge,
+  tags,
+  target = "_blank",
+  doiUrl,
+  pdfUrl
+} = Astro.props;
+
 import { Image } from "astro:assets";
+
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
 
-<div
-  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
->
-  <a href={url} target={target}>
-    <div class="hero-content flex-col md:flex-row">
-      {
-        img && (
-          <Image
-            src={img}
-            width={750}
-            height={422}
-            alt={title}
-            class="max-w-full md:max-w-[13rem] rounded-lg"
-          />
-        )
-      }
-      <div class="grow w-full">
-        <h1 class="text-xl font-bold">
-          {title}
-        </h1>
+<div class="rounded-lg bg-base-100">
+  <div class="hero-content flex-col md:flex-row">
+    {
+      img && (
+        <Image
+          src={img}
+          width={750}
+          height={422}
+          alt={title}
+          class="max-w-full md:max-w-[13rem] rounded-lg"
+        />
+      )
+    }
 
-        {badge && (
-          <div class="badge badge-secondary mt-1">{badge}</div>
-        )}
+    <div class="grow w-full">
+      <h1 class="text-xl font-bold">
+        {title}
+      </h1>
 
-        <p class="py-1 text-1xl" set:html={desc}></p>
+      {badge && (
+        <div class="badge badge-secondary mt-1">{badge}</div>
+      )}
 
-        <div class="card-actions justify-end">
-          {
-            tags &&
-              tags.map((tag) => (
-                <a href={`${tag_url}/${tag}`} class="badge badge-outline">
-                  {tag}
-                </a>
-              ))
-          }
-        </div>
+      <div class="mt-2 flex flex-wrap gap-2">
+        {
+          doiUrl && (
+            <a
+              href={doiUrl}
+              target={target}
+              rel="noopener noreferrer"
+              class="badge badge-secondary"
+            >
+              DOI
+            </a>
+          )
+        }
+
+        {
+          pdfUrl && (
+            <a
+              href={pdfUrl}
+              target={target}
+              rel="noopener noreferrer"
+              class="badge badge-secondary"
+            >
+              PDF
+            </a>
+          )
+        }
       </div>
 
+      <p class="py-1 text-1xl" set:html={desc}></p>
+
+      <div class="card-actions justify-end">
+        {
+          tags &&
+            tags.map((tag) => (
+              <a href={`${tag_url}/${tag}`} class="badge badge-outline">
+                {tag}
+              </a>
+            ))
+        }
+      </div>
     </div>
-  </a>
+  </div>
 </div>
