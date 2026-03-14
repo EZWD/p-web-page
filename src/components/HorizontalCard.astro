@@ -44,8 +44,8 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
           doiUrl && (
             <a
               href={doiUrl}
-              target={target}
-              rel="noopener noreferrer"
+              target={doiUrl === "#" ? undefined : target}
+              rel={doiUrl === "#" ? undefined : "noopener noreferrer"}
               class="badge badge-secondary badge-soft"
             >
               DOI
@@ -57,8 +57,8 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
           pdfUrl && (
             <a
               href={pdfUrl}
-              target={target}
-              rel="noopener noreferrer"
+              target={pdfUrl === "#" ? undefined : target}
+              rel={pdfUrl === "#" ? undefined : "noopener noreferrer"}
               class="badge badge-secondary badge-soft"
             >
               PDF
