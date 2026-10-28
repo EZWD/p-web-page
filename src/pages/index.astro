@@ -6,6 +6,8 @@ import createSlug from "../lib/createSlug"
 
 // import images
 import hfes25 from '../assets/img/hfes25.png';
+import hfes26_1 from '../assets/img/hfes26-1.jpg';
+import hfes26_2 from '../assets/img/hfes26-2.jpg';
 import VR26 from '../assets/img/VR26.jpg';
 import CHI26 from '../assets/img/CHI26.jpg';
 import Survey from '../assets/img/Survey.jpg';
@@ -33,7 +35,7 @@ const last_posts = posts.slice(0, 3);
     </div>
     <div class="py-2">
     <p class="text-lg font-bold">
-      I am actively looking for software engineer or research intern for Summer/Fall 2026.
+      I am actively looking for full time software engineer or research starting Summer/Fall 2027.
       <a
         href="/files/resume.pdf"
         target="_blank"
@@ -56,6 +58,28 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <HorizontalCard
+    title="Evaluating Gaze-Responsive Visual Effects for Multi-Window Visual Search in Virtual Interfaces"
+    img={hfes26_1}
+    desc={`<span class="text-black">Peiyu Zhang</span>, <span class="text-gray-400">Mohamad El Iskandarani</span>, <span class="text-gray-400">Sara Riggs</span><br/> User study evaluating how gaze-responsive visual effects influence visual search performance and efficiency in XR multi-window interfaces.<br/> `}
+    doiUrl="https://journals.sagepub.com/doi/full/10.1177/10711813261493584"
+    pdfUrl="https://journals.sagepub.com/doi/reader/10.1177/10711813261493584"
+    url="#"
+    badge="HFES Annual Meeting (ASPIRE) 2026"
+  />
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="Evaluating Gaze-Responsive Visual Effects for Multi-Window Visual Search in Virtual Interfaces"
+    img={hfes26_2}
+    desc={`<span class="text-gray-400">Mohamad El Iskandarani</span>, <span class="text-black">Peiyu Zhang</span>, <span class="text-gray-400">Matthew L. Bolton</span>, <span class="text-gray-400">Sara Riggs</span><br/> User study evaluating how gaze-responsive visual effects influence visual search performance and efficiency in XR multi-window interfaces.<br/> `}
+    doiUrl="https://journals.sagepub.com/doi/full/10.1177/10711813261498787"
+    pdfUrl="https://journals.sagepub.com/doi/reader/10.1177/10711813261498787"
+    url="#"
+    badge="HFES Annual Meeting (ASPIRE) 2026"
+  />
+  <div class="divider my-0"></div>
+  
+  <HorizontalCard
     title="Web Pages as 3D Proxies in VR: A Design Framing and Preliminary Exploration"
     img={CHI26}
     desc={`<span class="text-gray-400">Tianjie Shu*</span>, <span class="text-black">Peiyu Zhang*</span> <br/> Novel VR web browsing experience with tabs represented by 3D proxies of real-world objects, supporting spatial and physical interaction. <br/> `}
@@ -64,6 +88,7 @@ const last_posts = posts.slice(0, 3);
     url="#"
     badge="CHI 2026 Extended Abstract"
   />
+  <div class="divider my-0"></div>
 
   <HorizontalCard
     title="Multitasking Across Physical and Virtual Displays: The Effect of Spatial Discontinuity and Task Load"
